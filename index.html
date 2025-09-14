@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CSS Float</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+
+        <!--Importing my Pixelify Font so it's the font i want-->
+          <!--GOOGLE FONT PIXEL-->
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+      body{
+        font-family:'Pixelify Sans';
+      }
+    </style>
+    </head>
+    <body>
+        <div id="container">   <!--*CLASS="FLOATING" is what we will use in the css soon*-->
+        <div id="mainwindow" class="floating"> <!-- This "div" makes a little container to hold our window popup, the ID  labels it as our main window-->
+            <div class="titlebar"><!--holds the title bar at the top of the window-->
+                <span>New Popup !</span> <!-- The title of the popup-->
+                <div class="windowbtns"><!-- wraps around the buttons so we can align em better-->
+                <button>_</button>
+                <button>X</button> <!-- these are the buttons you'd use to "minimize" or "exit" normally-->
+                </div>
+            </div>
+            <div class="windowcontent"> <!--This is like a little box that holds the content / message of your window. It's UNDER the titlebar not inside-->
+                I'm Floating 
+            </div>
+        </div>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>

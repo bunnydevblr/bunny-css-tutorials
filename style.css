@@ -1,0 +1,80 @@
+/*WELCOME to the floating tutorial babyyy! This is a simple css project and won't take long at all to finish
+please feel free to send in asks for other small things you'd like to know how to do*/
+
+body {
+    color:#102655; /*changes text color for everything in the body*/
+}
+
+#container{
+    width: 100vw; /* vw = view width, vh = view height, this tells it to be 100% of the view width n height*/
+    height: 100vh;
+    top:0; /*positions the container 0pixels from the top and left, so it covers the screen sorta*/
+    left:0;
+    display: flex; /*says to the big container "hey! pretend we're made of big building blocks now*/
+    justify-content: center; /*centers the content horizontally across the page*/
+    align-items: center; /*centers the content inside the container vertically*/
+}
+
+/*all of the above means"hey you're a big container with some stuff inside, you're gonna hold the stuff inside where 
+i want you to. okay? okay." so that the popup i'm creating sits in teh center of the page*/
+
+/*START OF THE CUTE POPUP*/
+
+#mainwindow{ /*grabs the main window and everything inside it! anything in between the brackets affects the WHOOLLLEE window.sorta.*/
+    width: 400px;
+    height: 200px;
+    position: absolute; /*this kind of says "i can move anywhere i want and you can't stop me"*/
+    border: 2px solid #feabc5; /*tells the border to be 2px, solid, and the color*/
+    border: outset #b5cdff; /*creates that cool little "win98" style outside border*/
+    background-color: #dae8ff; /*sets the background color of the main window*/
+}
+
+.titlebar{
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color:#102655;
+    color:#dae8ff;
+    padding: 2px;
+}
+
+.windowbtns{ /*this wraps around the buttons and makes it a bajillion times easier to stay on the right side of the titlebar*/
+    display: flex;
+    gap: 2px;
+}
+.titlebar button{
+    font-family: inherit; /* says to the buttons inside the titlebar "hey actually be the font the rest of this ish is"*/
+    width: 24px;
+    height: 24px;
+    background-color: #b5cdff;
+    border:  1px #3d5382;
+    border:  1px outset; /*gives it that cute little 3d look*/
+}
+.windowcontent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    height: calc(100% - 24px); /*subtracts the titlebar height*/
+}
+
+/*I learned a lot making this because it made me break every single thing down. Also WOW do I use display flex a lot, there's probably an easier 
+way to learn how to make those things. but I'm not there yet, so this is what we got  bby. NOW let's add this float*/
+
+.floating{
+    animation:  floaty 3s ease-in-out infinite; /* this says "the animation is 3 seconds, easing in and out, and infinite !*/
+
+}
+
+@keyframes floaty { /*these keyframe make it move up and down!*/
+  0% {
+    transform: translateY(0); /* "hey, we're 0% of the way and haven't moved at all vertically"*/
+  }
+  50% {
+    transform: translateY(-10px); /* moves up 10px at 50% of the way through the animation*/
+  }
+  100% {
+    transform: translateY(0); /* returns back to the original spot*/
+  }
+}
